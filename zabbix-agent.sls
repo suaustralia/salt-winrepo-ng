@@ -8,12 +8,12 @@ zabbix-agent:
   '{{major}}.{{minor}}.2400':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Zabbix Agent (64-bit)'
-    installer: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent2-{{major}}.{{minor}}-windows-amd64-openssl.msi'
-    uninstaller: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent2-{{major}}.{{minor}}-windows-amd64-openssl.msi'
+    installer: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent-{{major}}.{{minor}}-windows-amd64-openssl.msi'
+    uninstaller: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent-{{major}}.{{minor}}-windows-amd64-openssl.msi'
     {% else %}
     full_name: 'Zabbix Agent (32-bit)'
-    installer: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent2-{{major}}.{{minor}}-windows-i386-openssl.msi'
-    uninstaller:  '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent2-{{major}}.{{minor}}-windows-i386-openssl.msi'
+    installer: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent-{{major}}.{{minor}}-windows-i386-openssl.msi'
+    uninstaller:  '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent-{{major}}.{{minor}}-windows-i386-openssl.msi'
     {% endif %}
     install_flags: '/qn /norestart SERVER=localhost'
     uninstall_flags: '/qn /norestart'
